@@ -5,11 +5,3 @@
 @Software: GoLand
 */
 package wgin
-
-type WginCom struct{
-	Rinit map[string]interface{}
-}
-
-func(this *WginCom)Register(name string, objProject interface{}){
-	this.Rinit[name] = objProject
-}

@@ -4,7 +4,7 @@
 @File : route
 @Software: GoLand
 */
-package i
+package g
 
 func init()  {
 	
