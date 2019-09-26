@@ -24,7 +24,7 @@ type InitFunc struct{
 
 var InitFuncList []InitFunc
 
-
+// 注册器初始化
 func (p *program) Init(env svc.Environment) error {
 	log.Printf("is win service? %v\n", env.IsWindowsService())
 
@@ -38,6 +38,7 @@ func (p *program) Init(env svc.Environment) error {
 	return nil
 }
 
+// 执行方法
 func (p *program) Start() error {
 	// The Start method must not block, or Windows may assume your service failed
 	// to start. Launch a Goroutine here to do something interesting/blocking.
@@ -55,6 +56,7 @@ func (p *program) Start() error {
 	return nil
 }
 
+// 退出方法
 func (p *program) Stop() error {
 	// The Stop method is invoked by stopping the Windows service, or by pressing Ctrl+C on the console.
 	// This method may block, but it's a good idea to finish quickly or your process may be killed by
