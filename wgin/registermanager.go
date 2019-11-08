@@ -31,7 +31,7 @@ func (p *program) Init(env svc.Environment) error {
 	for _,v := range InitFuncList{
 		err := v.Fun()
 		if err != nil{
-
+			return err
 		}
 	}
 
